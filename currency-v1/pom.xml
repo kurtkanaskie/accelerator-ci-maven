@@ -34,7 +34,7 @@
 		<branch>a local</branch>
 	</properties>
 
-	<!-- This is where you add the environment specific properties under various profile names -->
+	<!-- This is where you add environment specific properties under various profile names -->
 	<!-- For apigee.options, refer to "Advanced Configuration Options" under https://github.com/apigee/apigee-deploy-maven-plugin#pom-xml-sample -->
 	<profiles>
 		<profile>
