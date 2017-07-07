@@ -6,10 +6,11 @@
 * git checkout master
 
 ### Feature
-* git checkout -b feature1
-* git push origin feature1
-* MAKE chanages
-* git push
+* git checkout -b feature/jira1
+* git push origin feature/jira1
+* MAKE changes for feature/jira1
+* git commit -am  "Added changes for feature1"
+* git push origin feature/jira1
 * OBSERVE build
 #### Pull Request
 
