@@ -13,6 +13,9 @@
 * git push origin feature/jira1
 * OBSERVE build
 #### Pull Request
+* Go to repo and create pull request from feature/jira1 to master
+* Comment on pull request
+* Do the merge pull request "Create a merge commit" or use command line
 
 ### Merge to Master (TBD)
 * git merge master feature1
