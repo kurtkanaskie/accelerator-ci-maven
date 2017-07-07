@@ -33,6 +33,9 @@ Clean up feature branch
 * git branch -d feature/1
 * git push origin :feature/1
 
+#### Update local Master
+* git checkout master
+* git pull
 
 ### Merge to Prod
 This is automatic via Continuous Delivery, once the build in master succeeds
