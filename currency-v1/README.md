@@ -14,8 +14,10 @@ MAKE changes for feature/jira1
 OBSERVE build
 
 #### Test locally
-* set your ~/.m2/settings.xml
+Set your ~/.m2/settings.xml
 * mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
+Run integration tests
+* mvn process-resources exec:exec@integration -Ptest
 
 #### Merge to Master
 ##### Pull Request
@@ -33,4 +35,4 @@ Clean up feature branch
 
 
 ### Merge to Prod
-This is automatic, once the build in master succeeds
+This is automatic via Continuous Delivery, once the build in master succeeds
