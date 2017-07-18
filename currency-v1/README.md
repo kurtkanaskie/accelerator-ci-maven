@@ -7,17 +7,20 @@
 
 ### Feature
 * git checkout -b feature/jira1
-* git push origin feature/jira1
 MAKE changes for feature/jira1
-* git commit -am  "Added changes for feature1"
-* git push origin feature/jira1
-OBSERVE build
 
 #### Test locally
 Set your ~/.m2/settings.xml
 * mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
 Run integration tests
 * mvn process-resources exec:exec@integration -Ptest
+OBSERVE build
+
+#### Test via Jenkins
+* git push origin feature/jira1
+* git commit -am  "Added changes for feature1"
+* git push origin feature/jira1
+OBSERVE build
 
 #### Merge to Master
 ##### Pull Request
