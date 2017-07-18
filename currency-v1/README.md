@@ -12,12 +12,13 @@ MAKE changes for feature/jira1
 #### Test locally
 Set your ~/.m2/settings.xml
 * mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
+Run unit tests
+* mvn process-resources exec:exec@unit -Ptest
 Run integration tests
 * mvn process-resources exec:exec@integration -Ptest
 OBSERVE build
 
 #### Test via Jenkins
-* git push origin feature/jira1
 * git commit -am  "Added changes for feature1"
 * git push origin feature/jira1
 OBSERVE build
@@ -44,4 +45,4 @@ Clean up feature branch
 This is automatic via Continuous Delivery, once the build in master succeeds
 
 #### Notes
-Jira2
+Jira3
