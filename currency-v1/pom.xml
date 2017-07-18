@@ -38,6 +38,21 @@
 	<!-- For apigee.options, refer to "Advanced Configuration Options" under https://github.com/apigee/apigee-deploy-maven-plugin#pom-xml-sample -->
 	<profiles>
 		<profile>
+			<id>dev</id>
+			<properties>
+				<apigee.profile>dev</apigee.profile>
+				<apigee.env>dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion>
+				<apigee.org>${env.APIGEE_ORG}</apigee.org>
+				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
+				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
+				<apigee.options>update</apigee.options>
+				<api.northbound.domain>${env.API_DOMAIN_TEST}</api.northbound.domain>
+				<api.testtag>~@wip</api.testtag>
+			</properties>
+		</profile>
+		<profile>
 			<id>test</id>
 			<properties>
 				<apigee.profile>test</apigee.profile>
@@ -50,6 +65,36 @@
 				<apigee.options>update</apigee.options>
 				<api.northbound.domain>${env.API_DOMAIN_TEST}</api.northbound.domain>
 				<api.testtag>~@wip</api.testtag>
+			</properties>
+		</profile>
+		<profile>
+			<id>qa</id>
+			<properties>
+				<apigee.profile>qa</apigee.profile>
+				<apigee.env>qa</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion>
+				<apigee.org>${env.APIGEE_ORG}</apigee.org>
+				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
+				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
+				<apigee.options>override</apigee.options>
+				<api.northbound.domain>${env.API_DOMAIN_TEST}</api.northbound.domain>
+				<api.testtag>~@wip</api.testtag>
+			</properties>
+		</profile>
+		<profile>
+			<id>staging</id>
+			<properties>
+				<apigee.profile>staging</apigee.profile>
+				<apigee.env>staging</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion>
+				<apigee.org>${env.APIGEE_ORG}</apigee.org>
+				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
+				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
+				<apigee.options>update</apigee.options>
+				<api.northbound.domain>${env.API_DOMAIN_PROD}</api.northbound.domain>
+				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
 		<profile>

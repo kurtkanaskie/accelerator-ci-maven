@@ -1,5 +1,4 @@
 ## Git Commands
-Uh oh
 
 ### Intitial
 * git checkout -b prod
@@ -13,10 +12,13 @@ MAKE changes for feature/jira1
 #### Test locally
 Set your ~/.m2/settings.xml
 * mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
-Run unit tests
+Run unit tests and integration tests in local environment
 * mvn process-resources exec:exec@unit -Ptest
-Run integration tests
 * mvn process-resources exec:exec@integration -Ptest
+Run integration tests in each environment
+* mvn process-resources exec:exec@integration -Pdev -Ddeployment.suffix=
+* mvn process-resources exec:exec@integration -Ptest -Ddeployment.suffix=
+* mvn process-resources exec:exec@integration -Pqa -Ddeployment.suffix=
 OBSERVE build
 
 #### Test via Jenkins
@@ -47,3 +49,11 @@ This is automatic via Continuous Delivery, once the build in master succeeds
 
 #### Notes
 Jira3
+
+### Other local depoly commands
+mvn install -Pdev -Dcommit=local -Dbranch=/feature/jira3
+mvn install -Pdev -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
+mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/test
+mvn install -Pqa -Ddeployment.suffix= -Dcommit=local -Dbranch=/qa
+mvn install -Pstaging -Ddeployment.suffix= -Dcommit=local -Dbranch=/staging
+mvn install -Pprod -Ddeployment.suffix= -Dcommit=local -Dbranch=/prod
