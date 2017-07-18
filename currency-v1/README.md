@@ -47,9 +47,6 @@ Clean up feature branch
 ### Merge to Prod
 This is automatic via Continuous Delivery, once the build in master succeeds
 
-#### Notes
-Jira3
-
 ### Other local depoly commands
 mvn install -Pdev -Dcommit=local -Dbranch=/feature/jira3
 mvn install -Pdev -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
@@ -57,3 +54,7 @@ mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/test
 mvn install -Pqa -Ddeployment.suffix= -Dcommit=local -Dbranch=/qa
 mvn install -Pstaging -Ddeployment.suffix= -Dcommit=local -Dbranch=/staging
 mvn install -Pprod -Ddeployment.suffix= -Dcommit=local -Dbranch=/prod
+
+#### Notes
+Jira4
+
