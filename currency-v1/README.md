@@ -58,3 +58,5 @@ This is automatic via Continuous Delivery, once the build in master succeeds
 Note the use of deployment.suffix it controls the proxy name and basepath, currency-v1 (master, prod), currency-jenkinsv1 (jenkins feature branches)
 
 NOTE: Jenkins in docker uses the "setup/.run_image.sh" that sets global environment variables, so to move to a different org, you have to restart Jenkins, its not sufficent to set those in the pom.xml
+
+Test
