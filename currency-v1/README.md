@@ -16,9 +16,8 @@ Run unit tests and integration tests in local environment
 * mvn process-resources exec:exec@unit -Ptest
 * mvn process-resources exec:exec@integration -Ptest
 Run integration tests in each environment
-* mvn process-resources exec:exec@integration -Pdev -Ddeployment.suffix=
 * mvn process-resources exec:exec@integration -Ptest -Ddeployment.suffix=
-* mvn process-resources exec:exec@integration -Pqa -Ddeployment.suffix=
+* mvn process-resources exec:exec@integration -Pprod -Ddeployment.suffix=
 OBSERVE build
 
 #### Test via Jenkins
@@ -47,12 +46,10 @@ Clean up feature branch
 ### Merge to Prod
 This is automatic via Continuous Delivery, once the build in master succeeds
 
-### Other local depoly commands
-mvn install -Pdev -Dcommit=local -Dbranch=/feature/jira3
-mvn install -Pdev -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
+### Other local deploy commands
+mvn install -Ptest -Dcommit=local -Dbranch=/feature/jira3
+mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
 mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/test
-mvn install -Pqa -Ddeployment.suffix= -Dcommit=local -Dbranch=/qa
-mvn install -Pstaging -Ddeployment.suffix= -Dcommit=local -Dbranch=/staging
 mvn install -Pprod -Ddeployment.suffix= -Dcommit=local -Dbranch=/prod
 
 #### Notes
