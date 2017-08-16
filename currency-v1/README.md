@@ -47,11 +47,13 @@ Clean up feature branch
 This is automatic via Continuous Delivery, once the build in master succeeds
 
 ### Other local deploy commands
-mvn install -Ptest -Dcommit=local -Dbranch=/feature/jira3
-mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
-mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/test
-mvn install -Pprod -Ddeployment.suffix= -Dcommit=local -Dbranch=/prod
+* mvn install -Ptest -Dcommit=local -Dbranch=/feature/jira3
+* mvn install -Ptest -Ddeployment.suffix=jenkins -Dcommit=local -Dbranch=/master
+* mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/master
+* mvn install -Ptest -Ddeployment.suffix= -Dcommit=local -Dbranch=/test
+* mvn install -Pprod -Ddeployment.suffix= -Dcommit=local -Dbranch=/prod
 
 #### Notes
-Jira4
+
+Note the use of deployment.suffix it controls the proxy name and basepath, currency-v1 (master, prod), currency-jenkinsv1 (jenkins feature branches)
 
