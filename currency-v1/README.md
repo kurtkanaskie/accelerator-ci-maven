@@ -7,15 +7,16 @@
 
 ### Feature
 * git checkout -b feature/jira1
+
 MAKE changes for feature/jira1
 
 #### Test locally
 Set your ~/.m2/settings.xml
 * mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
-Run unit tests and integration tests in local environment
+--- (Run unit tests and integration tests in local environment)
 * mvn process-resources exec:exec@unit -Ptest
 * mvn process-resources exec:exec@integration -Ptest
-Run integration tests in each environment
+--- (Run integration tests in each environment)
 * mvn process-resources exec:exec@integration -Ptest -Ddeployment.suffix=
 * mvn process-resources exec:exec@integration -Pprod -Ddeployment.suffix=
 OBSERVE build
