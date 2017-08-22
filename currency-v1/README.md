@@ -37,9 +37,13 @@ If the build succeeds you're ready to move into the master branch.
 * git checkout master
 * git merge --no-ff feature/jira1
 * git push
+
 Clean up feature branch
-* git branch -d feature/1
-* git push origin :feature/1
+* git branch -d feature/jira1
+* git push origin --delete feature/jira1
+
+Or using this:
+* git push origin :feature/jira1
 
 #### Update local Master
 * git checkout master
