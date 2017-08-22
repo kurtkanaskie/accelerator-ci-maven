@@ -6,25 +6,26 @@
 * git checkout master
 
 ### Feature
-* git checkout -b feature/jira1
-
-MAKE changes for feature/jira1
+* git checkout -b feature/jira1 --- (MAKE changes for feature/jira1)
 
 #### Test locally
 Set your ~/.m2/settings.xml
-* mvn -X install -Ptest -Dcommit=local -Dbranch=/feature/jira1 
---- (Run unit tests and integration tests in local environment)
+##### Initial build and deploy to currencty-"yourusername"v1
+* mvn -X install -Ptest -Dcommit=local -Dbranch=feature/jira1 
+##### Run unit tests and integration tests
 * mvn process-resources exec:exec@unit -Ptest
 * mvn process-resources exec:exec@integration -Ptest
---- (Run integration tests in each environment)
+##### To run integration tests in other environments
 * mvn process-resources exec:exec@integration -Ptest -Ddeployment.suffix=
 * mvn process-resources exec:exec@integration -Pprod -Ddeployment.suffix=
-OBSERVE build
+
+Once you're happy with the "new" tests locally and verify the feature "doesn't work" in test and prod, then move on to building via Jenkins.
 
 #### Test via Jenkins
 * git commit -am  "Added changes for feature1"
 * git push origin feature/jira1
-OBSERVE build
+
+If the build succeeds you're ready to move into the master branch.
 
 #### Merge to Master
 ##### Pull Request
