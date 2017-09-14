@@ -329,9 +329,9 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/cucumber/bin/cucumber.js</executable>
+							<executable>./node_modules/cucumber/bin/cucumberjs</executable>
 							<commandlineArgs>
-								target/test/integration/features --tags ${api.testtag}
+								target/test/integration/features - -tags ${api.testtag}
 							</commandlineArgs>
 						</configuration>
 					</execution>
