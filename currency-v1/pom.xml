@@ -305,6 +305,7 @@
 						</configuration>
 					</execution>
 					<!-- run unit tests -->
+					<!--
 					<execution>
 						<id>unit</id>
 						<phase>validate</phase>
@@ -318,7 +319,9 @@
 							</commandlineArgs>
 						</configuration>
 					</execution>
+					-->
 					<!-- run integration tests -->
+					<!--
 					<execution>
 						<id>integration</id>
 						<phase>install</phase>
@@ -332,6 +335,7 @@
 							</commandlineArgs>
 						</configuration>
 					</execution>
+					-->
 				</executions>
 			</plugin>
 
