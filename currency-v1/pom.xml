@@ -313,7 +313,7 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/.bin/mocha</executable>
+							<executable>${project.root.dir}/node_modules/.bin/mocha</executable>
 							<commandlineArgs>
 								test/unit
 							</commandlineArgs>
