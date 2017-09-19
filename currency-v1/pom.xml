@@ -306,7 +306,6 @@
 						</configuration>
 					</execution>
 					<!-- run unit tests -->
-					<!--
 					<execution>
 						<id>unit</id>
 						<phase>validate</phase>
@@ -314,15 +313,13 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/mocha/bin/mocha</executable>
+							<executable>./node_modules/.bin/mocha</executable>
 							<commandlineArgs>
 								test/unit
 							</commandlineArgs>
 						</configuration>
 					</execution>
-					-->
 					<!-- run integration tests -->
-					<!--
 					<execution>
 						<id>integration</id>
 						<phase>install</phase>
@@ -330,13 +327,12 @@
 							<goal>exec</goal>
 						</goals>
 						<configuration>
-							<executable>./node_modules/cucumber/bin/cucumberjs</executable>
+							<executable>./node_modules/.bin/cucumberjs</executable>
 							<commandlineArgs>
 								target/test/integration/features - -tags ${api.testtag}
 							</commandlineArgs>
 						</configuration>
 					</execution>
-					-->
 				</executions>
 			</plugin>
 
