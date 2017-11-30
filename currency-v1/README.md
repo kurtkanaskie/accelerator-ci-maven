@@ -29,7 +29,7 @@ If the build succeeds you're ready to move into the master branch.
 
 #### Merge to Master
 ##### Pull Request
-* Go to repo and create pull request from feature/jira1 to master
+* Go to repo and create pull request from branch: master <... compare: feature/jira1
 * Comment on pull request
 * Do the merge pull request "Create a merge commit" or use command line
 
@@ -69,4 +69,4 @@ Test 2017-09-18
 Test 2017-09-19
 Test 2017-11-01
 Test 2017-11-29
-
+Test 2017-11-30 1
