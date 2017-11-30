@@ -74,7 +74,7 @@
 				<!-- override to create a new revision for each prod change -->
 				<apigee.options>override</apigee.options>
 				<apigee.override.delay>5</apigee.override.delay>
-				<api.northbound.domain>kurtkanaskietrainer-trial-test.apigee.net</api.northbound.domain>
+				<api.northbound.domain>kurtkanaskietrainer-trial-prod.apigee.net</api.northbound.domain>
 				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
