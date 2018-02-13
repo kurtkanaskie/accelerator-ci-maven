@@ -60,3 +60,5 @@ how to setup the whole CI process using the sample proxy and Dockerfile.
 
 Head over to community.apigee.com for questions or discussions.
 
+Change 2018-02-12
+
